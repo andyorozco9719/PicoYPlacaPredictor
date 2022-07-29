@@ -1,0 +1,50 @@
+﻿@using PicoyPlacaPredictor.Models
+@model Auto
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<p class="espacio">
+    <h4>Compruebe si Puede o No Circular</h4>
+</p>
+@using (Ajax.BeginForm("Comprobar", "Home", null, new AjaxOptions
+{
+    HttpMethod = "POST",
+    UpdateTargetId = "divMensaje"
+}))
+{
+    <div class="row espacio">
+        <div class="col-sm-5">
+            @Html.LabelFor(x => x.placa, new { @class = "pull-right mov" })
+        </div>
+        <div class="col-sm-5">
+            @Html.TextBoxFor(x => x.placa, new { @placeholder = "XXX-0000", @class = "form-control", @maxlength = 8 })
+            @Html.ValidationMessage("placa", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row espacio">
+        <div class="col-sm-5">
+            @Html.LabelFor(x => x.fecha, new { @class = "pull-right mov" })
+        </div>
+        <div class="col-sm-5">
+            @Html.TextBoxFor(x => x.fecha, new { @placeholder = "dd/mm/yyyy", @class = "form-control", @maxlength = 10 })
+            @Html.ValidationMessage("fecha", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="row espacio">
+        <div class="col-sm-5">
+            @Html.LabelFor(x => x.hora, new { @class = "pull-right mov" })
+        </div>
+        <div class="col-sm-5">
+            @Html.TextBoxFor(x => x.hora, new { @placeholder = "hh:mm", @class = "form-control", @maxlength = 5 })
+            @Html.ValidationMessage("hora", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="espacio centrar">
+        <div class="espacio">
+            <button type="submit" class="btn btn-outline-primary rounded-pill" >Consultar</button>
+        </div>
+    </div>
+}
+<div id="divMensaje" class="centrar text-danger"> </div>
