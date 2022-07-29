@@ -24,3 +24,7 @@ and at the time you must place in hh / mm format
 ![image](https://user-images.githubusercontent.com/91579298/181836411-71ed1a7b-51ee-48e7-84cc-c1233b63c67e.png)
 
 ![image](https://user-images.githubusercontent.com/91579298/181836462-90830413-3796-4177-859c-7a8d6d822bea.png)
+
+![image](https://user-images.githubusercontent.com/91579298/181836753-d24e473d-623a-4bc4-9565-f10e642e48aa.png)
+
+![image](https://user-images.githubusercontent.com/91579298/181836791-efaf1039-d45d-4e72-88d6-168726614371.png)
